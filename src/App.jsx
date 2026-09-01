@@ -7,7 +7,7 @@ import {
   Rocket, Handshake, Landmark, Server, ScrollText, TrendingUp, Layers
 } from 'lucide-react';
 import {
-  NUCLEOS, PRODUTOS, FRENTES, SETORES, VALORES, PUBLICACOES, EDUCACAO_FORMATOS,
+  NUCLEOS, PROJETOS_PD, FRENTES, SETORES, VALORES, PUBLICACOES, EDUCACAO_FORMATOS,
   ECOSSISTEMA, VALOR_PARCEIROS, INTERNACIONALIZACAO, SUSTENTABILIDADE_FONTES,
   GOVERNANCA_ITENS, INFRA_ITENS, ESTRUTURA, FASES, INDICADORES,
 } from './data.jsx';
@@ -164,7 +164,7 @@ const Navbar = ({ currentPath, setPath }) => {
     { name: 'Home', id: 'home' },
     { name: 'Sobre', id: 'sobre' },
     { name: 'Núcleos', id: 'nucleos' },
-    { name: 'Produtos', id: 'produtos' },
+    { name: 'Projetos de P&D', id: 'produtos' },
     { name: 'Pesquisa', id: 'pesquisa' },
     { name: 'Institucional', id: 'institucional' },
     { name: 'Contato', id: 'contato' },
@@ -344,18 +344,28 @@ export default function App() {
       case 'produtos': return (
         <div className="pt-32 pb-24 container mx-auto px-6 animate-in slide-in-from-bottom-4 duration-500">
           <SectionHeader 
-            title="Portfólio de Produtos" 
-            subtitle="Plataformas e APIs em desenvolvimento, nascidas da pesquisa aplicada dos núcleos do IBDIA."
+            title="Projetos de P&D" 
+            subtitle="Pesquisa aplicada em estágios iniciais, conduzida pelos núcleos do IBDIA — ainda não são produtos comerciais."
             centered
           />
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
-            {PRODUTOS.map((p, i) => (
+
+          <div className="bg-slate-50 rounded-[2.5rem] p-10 md:p-14 mb-16 max-w-4xl mx-auto text-center">
+            <p className="text-slate-600 leading-relaxed">
+              A frente de <strong>Geotecnologias e Inteligência Territorial</strong> do Instituto está estruturando a <strong>GeoAI Platform</strong>: um conjunto modular de projetos de pesquisa que combina agentes de linguagem natural, processamento geoespacial (GIS), visão computacional e modelos físicos para interpretar dados de satélite, radar, GNSS, topografia e geofísica. Os projetos abaixo estão em diferentes estágios — de especificação técnica a MVP — e resultados aplicáveis poderão futuramente ser licenciados ou transferidos para parceiros comerciais.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {PROJETOS_PD.map((p, i) => (
               <div key={i} className="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl transition-all hover:-translate-y-2">
-                <div className="w-12 h-12 bg-gradient-to-br from-[#0D3B66] to-[#2EC4B6] rounded-xl flex items-center justify-center text-white mb-5">
-                  <Layers size={22} />
+                <div className="flex items-start justify-between mb-5">
+                  <div className="w-12 h-12 bg-gradient-to-br from-[#0D3B66] to-[#2EC4B6] rounded-xl flex items-center justify-center text-white">
+                    <Layers size={22} />
+                  </div>
+                  <span className="text-xs font-bold text-[#0D3B66] bg-blue-50 px-3 py-1 rounded-full">{p.fase}</span>
                 </div>
                 <h3 className="text-lg font-bold text-slate-900 mb-3">{p.nome}</h3>
-                <p className="text-slate-600 text-sm leading-relaxed">{p.finalidade}</p>
+                <p className="text-slate-600 text-sm leading-relaxed">{p.resumo}</p>
               </div>
             ))}
           </div>
@@ -591,7 +601,7 @@ export default function App() {
               <h5 className="font-bold text-sm uppercase tracking-widest text-slate-500">Links</h5>
               <button onClick={() => setPath('sobre')} className="block text-slate-400 hover:text-white transition-colors text-sm">Sobre</button>
               <button onClick={() => setPath('nucleos')} className="block text-slate-400 hover:text-white transition-colors text-sm">Núcleos</button>
-              <button onClick={() => setPath('produtos')} className="block text-slate-400 hover:text-white transition-colors text-sm">Produtos</button>
+              <button onClick={() => setPath('produtos')} className="block text-slate-400 hover:text-white transition-colors text-sm">Projetos de P&D</button>
               <button onClick={() => setPath('pesquisa')} className="block text-slate-400 hover:text-white transition-colors text-sm">Pesquisa</button>
             </div>
             <div className="space-y-4">
