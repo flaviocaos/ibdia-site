@@ -90,6 +90,78 @@ const InfoCard = ({ icon: IconComponent, title, children }) => (
   </div>
 );
 
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xzebregv';
+
+const ContactForm = () => {
+  const [status, setStatus] = useState('idle'); // idle | sending | success | error
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setStatus('sending');
+    const form = e.target;
+    const data = new FormData(form);
+    try {
+      const response = await fetch(FORMSPREE_ENDPOINT, {
+        method: 'POST',
+        body: data,
+        headers: { Accept: 'application/json' },
+      });
+      if (response.ok) {
+        setStatus('success');
+        form.reset();
+      } else {
+        setStatus('error');
+      }
+    } catch (err) {
+      setStatus('error');
+    }
+  };
+
+  if (status === 'success') {
+    return (
+      <div className="text-center py-12">
+        <CheckCircle2 size={48} className="text-[#2EC4B6] mx-auto mb-4" />
+        <h4 className="text-xl font-bold text-slate-900 mb-2">Mensagem enviada!</h4>
+        <p className="text-slate-500">Obrigado pelo contato — responderemos em breve pelo e-mail informado.</p>
+        <button
+          onClick={() => setStatus('idle')}
+          className="mt-6 text-sm font-bold text-[#0D3B66] hover:text-[#2EC4B6] transition-colors"
+        >
+          Enviar outra mensagem
+        </button>
+      </div>
+    );
+  }
+
+  return (
+    <form onSubmit={handleSubmit} className="space-y-6">
+      <div className="grid grid-cols-2 gap-4">
+        <input type="text" name="name" placeholder="Nome" required className="w-full px-5 py-3.5 bg-slate-50 border-none rounded-xl focus:ring-2 focus:ring-[#2EC4B6] outline-none" />
+        <input type="email" name="email" placeholder="E-mail" required className="w-full px-5 py-3.5 bg-slate-50 border-none rounded-xl focus:ring-2 focus:ring-[#2EC4B6] outline-none" />
+      </div>
+      <select name="assunto" className="w-full px-5 py-3.5 bg-slate-50 border-none rounded-xl focus:ring-2 focus:ring-[#2EC4B6] outline-none text-slate-500">
+        <option>Parceria Corporativa</option>
+        <option>Investigação Académica</option>
+        <option>Imprensa</option>
+      </select>
+      <textarea name="message" placeholder="Mensagem" required className="w-full px-5 py-3.5 bg-slate-50 border-none rounded-xl focus:ring-2 focus:ring-[#2EC4B6] outline-none h-32"></textarea>
+      <button
+        type="submit"
+        disabled={status === 'sending'}
+        className="w-full py-4 bg-[#0D3B66] text-white font-bold rounded-xl shadow-lg hover:bg-slate-800 transition-all disabled:opacity-60 disabled:cursor-not-allowed"
+      >
+        {status === 'sending' ? 'Enviando...' : 'Enviar Mensagem'}
+      </button>
+      {status === 'error' && (
+        <p className="text-sm text-red-500 text-center">
+          Não foi possível enviar agora. Tente novamente ou escreva direto para{' '}
+          <a href="mailto:ibdiabrasil@gmail.com" className="underline">ibdiabrasil@gmail.com</a>.
+        </p>
+      )}
+    </form>
+  );
+};
+
 // --- PÁGINAS ---
 
 const HomePage = ({ setPath }) => (
@@ -558,19 +630,7 @@ export default function App() {
               </div>
             </div>
             <div className="bg-white p-10 rounded-[2.5rem] shadow-2xl border border-slate-100">
-              <form className="space-y-6">
-                <div className="grid grid-cols-2 gap-4">
-                  <input type="text" placeholder="Nome" className="w-full px-5 py-3.5 bg-slate-50 border-none rounded-xl focus:ring-2 focus:ring-[#2EC4B6] outline-none" />
-                  <input type="email" placeholder="E-mail" className="w-full px-5 py-3.5 bg-slate-50 border-none rounded-xl focus:ring-2 focus:ring-[#2EC4B6] outline-none" />
-                </div>
-                <select className="w-full px-5 py-3.5 bg-slate-50 border-none rounded-xl focus:ring-2 focus:ring-[#2EC4B6] outline-none text-slate-500">
-                  <option>Parceria Corporativa</option>
-                  <option>Investigação Académica</option>
-                  <option>Imprensa</option>
-                </select>
-                <textarea placeholder="Mensagem" className="w-full px-5 py-3.5 bg-slate-50 border-none rounded-xl focus:ring-2 focus:ring-[#2EC4B6] outline-none h-32"></textarea>
-                <button className="w-full py-4 bg-[#0D3B66] text-white font-bold rounded-xl shadow-lg hover:bg-slate-800 transition-all">Enviar Mensagem</button>
-              </form>
+              <ContactForm />
             </div>
           </div>
         </div>
