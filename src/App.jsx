@@ -156,7 +156,7 @@ export default function App() {
           <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
             <div className="space-y-6 text-slate-600 text-lg leading-relaxed">
               <p>
-                Sediado em <strong>Urubici, Santa Catarina</strong>, o IBDIA nasce como um hub de inovação que conecta pesquisadores de elite a problemas reais da indústria e do governo.
+                Com atuação <strong>100% remota e nacional</strong>, o IBDIA nasce como um hub de inovação que conecta pesquisadores de elite a problemas reais da indústria e do governo.
               </p>
               <p>
                 A nossa missão é garantir que o Brasil não seja apenas um consumidor de tecnologia, mas um protagonista global na criação de sistemas inteligentes éticos e transparentes.
@@ -255,15 +255,15 @@ export default function App() {
               <div className="space-y-8 mt-10 text-slate-600">
                 <div className="flex items-center space-x-4">
                   <div className="p-3 bg-blue-50 text-[#0D3B66] rounded-xl"><MapPin /></div>
-                  <p>Urubici, Santa Catarina - Brasil</p>
+                  <p>Atuação remota - Brasil</p>
                 </div>
                 <div className="flex items-center space-x-4">
                   <div className="p-3 bg-blue-50 text-[#0D3B66] rounded-xl"><Mail /></div>
-                  <p>contato@ibdia.org.br</p>
+                  <a href="mailto:ibdiabrasil@gmail.com" className="hover:text-[#0D3B66] transition-colors">ibdiabrasil@gmail.com</a>
                 </div>
                 <div className="flex space-x-4 pt-4">
                   <button className="p-3 bg-slate-100 rounded-full hover:bg-[#0D3B66] hover:text-white transition-all"><Linkedin /></button>
-                  <button className="p-3 bg-slate-100 rounded-full hover:bg-[#0D3B66] hover:text-white transition-all"><Github /></button>
+                  <a href="https://github.com/flaviocaos" target="_blank" rel="noopener noreferrer" className="p-3 bg-slate-100 rounded-full hover:bg-[#0D3B66] hover:text-white transition-all"><Github /></a>
                 </div>
               </div>
             </div>
@@ -327,7 +327,7 @@ export default function App() {
           </div>
         </div>
         <div className="container mx-auto px-6 pt-12 mt-12 border-t border-slate-800 text-center text-xs text-slate-600">
-          © 2024 Instituto Brasileiro de Dados e IA. Urubici, SC - Brasil.
+          © 2026 Instituto Brasileiro de Dados e IA. Atuação remota - Brasil.
         </div>
       </footer>
     </div>
