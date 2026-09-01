@@ -87,17 +87,57 @@ export const NUCLEOS = [
   },
 ];
 
-export const PRODUTOS = [
-  { nome: 'IBDIA Forecast API', finalidade: 'API de análise preditiva e séries temporais para demanda, produção, consumo, energia e operações.' },
-  { nome: 'IBDIA GeoAI', finalidade: 'Plataforma de mapeamento inteligente e análise automatizada de imagens de satélite e dados geoespaciais.' },
-  { nome: 'IBDIA Health Intelligence', finalidade: 'Ambiente analítico para dados de saúde pública, indicadores, tendências e modelos preditivos.' },
-  { nome: 'IBDIA Urban Intelligence', finalidade: 'Plataforma de inteligência territorial para prefeituras, planejamento urbano e políticas públicas.' },
-  { nome: 'IBDIA Retail Intelligence', finalidade: 'Sistema de recomendação, segmentação, previsão e inteligência comercial para varejo.' },
-  { nome: 'IBDIA Responsible AI', finalidade: 'Plataforma de auditoria, explicabilidade, governança e avaliação de riscos de modelos de IA.' },
-  { nome: 'IBDIA OpenData AI', finalidade: 'Visualizador e analisador inteligente de dados públicos e bases abertas.' },
-  { nome: 'IBDIA Learning Lab', finalidade: 'Ambiente educacional para aprendizagem prática de IA, dados e desenvolvimento de modelos.' },
-  { nome: 'IBDIA Information Integrity', finalidade: 'Ferramentas de pesquisa e análise de padrões de desinformação e integridade informacional.' },
-  { nome: 'IBDIA GeoData Integrator', finalidade: 'Integração de dados espaciais, tabulares, estatísticos e APIs para análise territorial.' },
+export const PROJETOS_PD = [
+  {
+    nome: 'Survey AI',
+    resumo: 'Controle de qualidade e análise automática de levantamentos topográficos (CSV, DXF, SHP, GNSS/RINEX): outliers, fechamento, densidade e comparação entre campanhas.',
+    fase: 'MVP em desenvolvimento',
+  },
+  {
+    nome: 'Radar AI',
+    resumo: 'Análise inteligente de imagens SAR (Sentinel-1 e outras missões): detecção de mudanças, coerência interferométrica e deslocamento do terreno via linguagem natural.',
+    fase: 'Especificação técnica',
+  },
+  {
+    nome: 'Dam Monitor AI',
+    resumo: 'Integração de GNSS, InSAR, piezômetros, inclinômetros e drones para apoiar engenheiros na detecção de comportamentos anômalos em barragens.',
+    fase: 'Especificação técnica',
+  },
+  {
+    nome: 'Urban AI',
+    resumo: 'Inteligência geoespacial sobre crescimento urbano: expansão, densificação, impermeabilização e mudança de uso do solo a partir de imagens multitemporais.',
+    fase: 'Especificação técnica',
+  },
+  {
+    nome: 'Geology AI',
+    resumo: 'Identificação assistida de lineamentos, falhas e estruturas geológicas cruzando DEM, SAR, óptico e dados geofísicos, como apoio à validação de campo.',
+    fase: 'Pesquisa exploratória',
+  },
+  {
+    nome: 'Flood AI',
+    resumo: 'Mapeamento de áreas inundadas via SAR e modelagem hidrológica de cenários de chuva, com estimativa de infraestrutura e áreas expostas.',
+    fase: 'Pesquisa exploratória',
+  },
+  {
+    nome: 'Coast AI',
+    resumo: 'Extração automática de linha de costa em séries históricas de imagens para calcular taxas de erosão e acreção costeira.',
+    fase: 'Pesquisa exploratória',
+  },
+  {
+    nome: 'Reservoir AI',
+    resumo: 'Modelagem de reservatórios hídricos (volume, assoreamento) e módulo experimental com Fourier Neural Operators para reservatórios subterrâneos.',
+    fase: 'Pesquisa exploratória',
+  },
+  {
+    nome: 'GNSS AI',
+    resumo: 'Diagnóstico automático da qualidade de sessões GNSS: multipath, DOP, cycle slips e explicação em linguagem natural das causas de baixa qualidade.',
+    fase: 'Pesquisa exploratória',
+  },
+  {
+    nome: 'Geophysics AI',
+    resumo: 'Plataforma modular para GPR, magnetometria e outros métodos geofísicos, com processamento de sinal e reconhecimento de padrões e anomalias.',
+    fase: 'Pesquisa exploratória',
+  },
 ];
 
 export const FRENTES = [
@@ -197,3 +237,4 @@ export const INDICADORES = [
   'Profissionais e estudantes capacitados', 'Bolsas e pesquisadores vinculados',
   'Impacto comprovado em organizações e políticas públicas',
 ];
+
