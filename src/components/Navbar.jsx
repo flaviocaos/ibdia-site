@@ -9,6 +9,7 @@ const navLinks = [
   { name: 'Projetos de P&D', to: '/projetos-pd' },
   { name: 'Pesquisa', to: '/pesquisa' },
   { name: 'Institucional', to: '/institucional' },
+  { name: 'Participe', to: '/participe' },
   { name: 'Contato', to: '/contato' },
 ];
 
@@ -30,7 +31,7 @@ const Navbar = () => {
     `text-left text-base font-bold transition-all ${isActive ? 'text-[#2EC4B6]' : 'text-slate-700'}`;
 
   const goPartner = () => {
-    navigate('/contato');
+    navigate('/parceria-institucional');
     setMobileOpen(false);
     window.scrollTo(0, 0);
   };
@@ -80,3 +81,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
