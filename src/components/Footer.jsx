@@ -21,6 +21,7 @@ const Footer = () => (
           <Link to="/nucleos" className="block text-slate-400 hover:text-white transition-colors text-sm">Núcleos</Link>
           <Link to="/projetos-pd" className="block text-slate-400 hover:text-white transition-colors text-sm">Projetos de P&D</Link>
           <Link to="/pesquisa" className="block text-slate-400 hover:text-white transition-colors text-sm">Pesquisa</Link>
+          <Link to="/participe" className="block text-slate-400 hover:text-white transition-colors text-sm">Participe</Link>
         </div>
         <div className="space-y-4">
           <h5 className="font-bold text-sm uppercase tracking-widest text-slate-500">Legal</h5>
