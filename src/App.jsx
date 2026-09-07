@@ -9,6 +9,10 @@ import ProjetosPD from './pages/ProjetosPD.jsx';
 import Pesquisa from './pages/Pesquisa.jsx';
 import Institucional from './pages/Institucional.jsx';
 import Contato from './pages/Contato.jsx';
+import Participe from './pages/Participe.jsx';
+import ProponhaProjeto from './pages/ProponhaProjeto.jsx';
+import RedeIBDIA from './pages/RedeIBDIA.jsx';
+import ParceriaInstitucional from './pages/ParceriaInstitucional.jsx';
 
 // Rola a página para o topo sempre que a rota muda
 const ScrollToTop = () => {
@@ -34,6 +38,10 @@ export default function App() {
             <Route path="/pesquisa" element={<Pesquisa />} />
             <Route path="/institucional" element={<Institucional />} />
             <Route path="/contato" element={<Contato />} />
+            <Route path="/participe" element={<Participe />} />
+            <Route path="/proponha-projeto" element={<ProponhaProjeto />} />
+            <Route path="/rede-ibdia" element={<RedeIBDIA />} />
+            <Route path="/parceria-institucional" element={<ParceriaInstitucional />} />
             <Route path="*" element={<Home />} />
           </Routes>
         </main>
