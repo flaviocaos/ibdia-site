@@ -34,10 +34,10 @@ const Home = () => {
                 <ChevronRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
-                to="/contato"
+                to="/participe"
                 className="px-8 py-4 bg-white text-[#0D3B66] border-2 border-slate-100 font-bold rounded-2xl shadow-sm hover:border-[#2EC4B6] transition-all text-center"
               >
-                Seja Parceiro
+                Participe do IBDIA
               </Link>
             </div>
           </div>
@@ -68,3 +68,4 @@ const Home = () => {
 };
 
 export default Home;
+
