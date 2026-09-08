@@ -19,7 +19,7 @@ const Footer = () => (
           <h5 className="font-bold text-sm uppercase tracking-widest text-slate-500">Links</h5>
           <Link to="/sobre" className="block text-slate-400 hover:text-white transition-colors text-sm">Sobre</Link>
           <Link to="/nucleos" className="block text-slate-400 hover:text-white transition-colors text-sm">Núcleos</Link>
-          <Link to="/projetos-pd" className="block text-slate-400 hover:text-white transition-colors text-sm">Projetos de P&D</Link>
+          <Link to="/projetos-pd" className="block text-slate-400 hover:text-white transition-colors text-sm">Programas e Projetos</Link>
           <Link to="/pesquisa" className="block text-slate-400 hover:text-white transition-colors text-sm">Pesquisa</Link>
           <Link to="/biblioteca" className="block text-slate-400 hover:text-white transition-colors text-sm">Biblioteca</Link>
           <Link to="/participe" className="block text-slate-400 hover:text-white transition-colors text-sm">Participe</Link>
