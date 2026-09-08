@@ -2,7 +2,7 @@ import React from 'react';
 import { SectionHeader, SubHeader, usePageMeta } from '../components/UI.jsx';
 import SubmissionForm, { Field, CheckGrid, inputClass, textareaClass, selectClass } from '../components/SubmissionForm.jsx';
 
-const areas = ['IA e Ciência de Dados','Geotecnologias / GeoAI','Saúde e Biomedicina','Indústria e Manufatura','Cidades e Infraestrutura','Meio Ambiente e Clima','Defesa e Segurança','Educação e Capacitação','Políticas Públicas e Sociedade','Inovação Aberta e Startups','Economia, Negócios e Inteligência de Mercado','Ciência, Astronomia e Tecnologias de Fronteira'];
+const areas = ['IA e Ciência de Dados','Geotecnologias / GeoAI','Saúde e Biomedicina','Indústria e Manufatura','Cidades e Infraestrutura','Meio Ambiente e Clima','Defesa e Segurança','Educação e Capacitação','Políticas Públicas e Sociedade','Inovação Aberta e Startups','Agronegócio e Agricultura Digital','Energia e Recursos Naturais'];
 const programas = ['IBDIA GeoAI','IBDIA Forecast','IBDIA OpenData AI','IBDIA Responsible AI','IBDIA Retail Intelligence','IBDIA AstroAI','Não sei / ainda não definido'];
 
 export default function ProponhaProjeto(){
