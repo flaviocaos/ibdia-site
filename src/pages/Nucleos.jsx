@@ -12,12 +12,12 @@ const Nucleos = () => {
     <div className="pt-32 pb-24 container mx-auto px-6 animate-in slide-in-from-bottom-4 duration-500">
       <SectionHeader
         title="Núcleos de Pesquisa e Desenvolvimento"
-        subtitle="Estrutura técnica dividida em doze verticais de excelência para atender a todos os setores da economia."
+        subtitle="Doze núcleos permanentes de competência científica e tecnológica, identificados de N01 a N12 e conectados aos Programas Estratégicos de PD&I."
         centered
       />
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
         {NUCLEOS.map((n, i) => (
-          <NucleoCard key={i} icon={n.icon} title={n.title} desc={n.desc} linhas={n.linhas} entregaveis={n.entregaveis} />
+          <NucleoCard key={n.codigo || i} codigo={n.codigo} icon={n.icon} title={n.title} desc={n.desc} linhas={n.linhas} entregaveis={n.entregaveis} />
         ))}
       </div>
     </div>
@@ -25,3 +25,4 @@ const Nucleos = () => {
 };
 
 export default Nucleos;
+
