@@ -1,6 +1,6 @@
 import React from 'react';
 import { ScrollText, BookOpen } from 'lucide-react';
-import { SectionHeader, SubHeader, InfoCard, CheckList, Tag, usePageMeta } from '../components/UI.jsx';
+import { PageHero, SubHeader, InfoCard, CheckList, Tag, usePageMeta } from '../components/UI.jsx';
 import { PUBLICACOES, EDUCACAO_FORMATOS, INTERNACIONALIZACAO } from '../data.jsx';
 
 const Pesquisa = () => {
@@ -10,13 +10,14 @@ const Pesquisa = () => {
   );
 
   return (
-    <div className="pt-32 pb-24 container mx-auto px-6 animate-in slide-in-from-bottom-4 duration-500">
-      <SectionHeader
+    <div className="animate-in slide-in-from-bottom-4 duration-500">
+      <PageHero
+        eyebrow="Ciência e Conhecimento"
         title="Pesquisa, Publicações e Formação"
-        subtitle="Produção científica e educação como principais instrumentos de posicionamento do Instituto."
+        subtitle="Produção científica, ciência aberta e educação como instrumentos de impacto, reputação e difusão do conhecimento."
       />
-
-      <div className="grid lg:grid-cols-2 gap-12 mb-20">
+      <div className="mx-auto max-w-7xl px-6 py-16 lg:px-8">
+<div className="grid lg:grid-cols-2 gap-12 mb-20">
         <InfoCard icon={ScrollText} title="Estratégia de Pesquisa e Publicações">
           <p className="text-sm text-slate-500 mb-5 leading-relaxed">
             Projetos próprios devem gerar papers, preprints, relatórios técnicos, white papers, datasets, benchmarks, modelos abertos e demonstrações tecnológicas — criando reputação, comprovando capacidade técnica e facilitando a aproximação com universidades, empresas, órgãos públicos e financiadores.
@@ -37,8 +38,10 @@ const Pesquisa = () => {
           {INTERNACIONALIZACAO.map((item, i) => <Tag key={i}>{item}</Tag>)}
         </div>
       </div>
+      </div>
     </div>
   );
 };
 
 export default Pesquisa;
+
