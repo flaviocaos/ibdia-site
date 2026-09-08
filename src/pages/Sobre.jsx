@@ -1,6 +1,6 @@
 import React from 'react';
 import { CheckCircle2, Target, Eye, Heart } from 'lucide-react';
-import { SectionHeader, SubHeader, Tag, usePageMeta } from '../components/UI.jsx';
+import { PageHero, SubHeader, Tag, usePageMeta } from '../components/UI.jsx';
 import { FRENTES, SETORES, VALORES } from '../data.jsx';
 
 const Sobre = () => {
@@ -10,12 +10,14 @@ const Sobre = () => {
   );
 
   return (
-    <div className="pt-32 pb-24 container mx-auto px-6 animate-in slide-in-from-bottom-4 duration-500">
-      <SectionHeader
+    <div className="animate-in slide-in-from-bottom-4 duration-500">
+      <PageHero
+        eyebrow="Sobre o IBDIA"
         title="O Instituto"
-        subtitle="Uma associação científica e tecnológica sem fins lucrativos dedicada à soberania tecnológica do Brasil através da Inteligência Artificial."
+        subtitle="Uma associação científica e tecnológica sem fins lucrativos dedicada à pesquisa aplicada, inovação e desenvolvimento de tecnologias em Inteligência Artificial e Dados."
       />
-      <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
+      <div className="mx-auto max-w-7xl px-6 py-16 lg:px-8">
+<div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
         <div className="space-y-6 text-slate-600 text-lg leading-relaxed">
           <p>
             Com atuação <strong>100% remota e nacional</strong>, o IBDIA nasce como um hub de inovação multidisciplinar que conecta ciência, engenharia, dados e necessidades reais da sociedade — combinando produção científica, desenvolvimento experimental, inovação aberta, formação de profissionais, cooperação com universidades, empresas e governos, e transferência de tecnologia.
@@ -25,24 +27,24 @@ const Sobre = () => {
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-8">
             <div className="text-center p-6 bg-slate-50 rounded-2xl">
-              <Target className="mx-auto mb-3 text-[#0D3B66]" />
+              <Target className="mx-auto mb-3 text-[#073B67]" />
               <h4 className="font-bold text-slate-900">Missão</h4>
               <p className="text-xs text-slate-500 mt-2">Pesquisar, desenvolver e democratizar tecnologias avançadas de IA e dados.</p>
             </div>
             <div className="text-center p-6 bg-slate-50 rounded-2xl">
-              <Eye className="mx-auto mb-3 text-[#0D3B66]" />
+              <Eye className="mx-auto mb-3 text-[#073B67]" />
               <h4 className="font-bold text-slate-900">Visão</h4>
               <p className="text-xs text-slate-500 mt-2">Referência brasileira com presença internacional em pesquisa e formação em IA.</p>
             </div>
             <div className="text-center p-6 bg-slate-50 rounded-2xl">
-              <Heart className="mx-auto mb-3 text-[#0D3B66]" />
+              <Heart className="mx-auto mb-3 text-[#073B67]" />
               <h4 className="font-bold text-slate-900">Propósito</h4>
               <p className="text-xs text-slate-500 mt-2">Impacto econômico, social, ambiental e científico através de dados e IA.</p>
             </div>
           </div>
         </div>
-        <div className="bg-[#0D3B66] rounded-[3rem] p-12 text-white shadow-2xl relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-64 h-64 bg-[#2EC4B6]/10 rounded-full -mr-20 -mt-20 blur-3xl"></div>
+        <div className="bg-[#073B67] rounded-[3rem] p-12 text-white shadow-2xl relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-64 h-64 bg-[#07899A]/10 rounded-full -mr-20 -mt-20 blur-3xl"></div>
           <h3 className="text-3xl font-bold mb-6">Diferenciais</h3>
           <ul className="space-y-6">
             {[
@@ -51,7 +53,7 @@ const Sobre = () => {
               { t: 'Soberania', d: 'Desenvolvimento de modelos de linguagem e dados nacionais.' },
             ].map((item, i) => (
               <li key={i} className="flex space-x-4">
-                <CheckCircle2 className="text-[#2EC4B6] flex-shrink-0" />
+                <CheckCircle2 className="text-[#07899A] flex-shrink-0" />
                 <div>
                   <h5 className="font-bold">{item.t}</h5>
                   <p className="text-sm text-blue-100/70">{item.d}</p>
@@ -96,8 +98,10 @@ const Sobre = () => {
           Seu diferencial está na integração entre pesquisa de fronteira, aplicações multissetoriais, desenvolvimento de tecnologia, educação, ética, cooperação e transferência de conhecimento. Essa combinação permite que um mesmo núcleo metodológico de IA seja aplicado a problemas tão diversos quanto saúde, mineração, infraestrutura, cidades, varejo, defesa, meio ambiente e astrofísica.
         </p>
       </div>
+      </div>
     </div>
   );
 };
 
 export default Sobre;
+
