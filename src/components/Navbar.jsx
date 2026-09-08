@@ -26,7 +26,10 @@ const Navbar = () => {
   }, []);
 
   const linkClass = ({ isActive }) =>
-    `text-sm font-bold transition-all hover:text-[#07899A] ${isActive ? 'text-[#07899A]' : 'text-slate-600'}`;
+    `text-sm font-bold transition-all ${scrolled
+      ? (isActive ? 'text-[#07899A]' : 'text-slate-600 hover:text-[#07899A]')
+      : (isActive ? 'text-cyan-200' : 'text-white/85 hover:text-white')
+    }`;
 
   const mobileLinkClass = ({ isActive }) =>
     `text-left text-base font-bold transition-all ${isActive ? 'text-[#07899A]' : 'text-slate-700'}`;
@@ -48,7 +51,7 @@ const Navbar = () => {
             <Brain size={22} />
           </div>
           <div>
-            <span className="text-xl font-black tracking-tighter text-slate-900">IBDIA</span>
+            <span className={`text-xl font-black tracking-tighter transition-colors ${mobileOpen || scrolled ? 'text-slate-900' : 'text-white'}`}>IBDIA</span>
           </div>
         </Link>
 
@@ -58,12 +61,12 @@ const Navbar = () => {
               {link.name}
             </NavLink>
           ))}
-          <button onClick={goPartner} className="bg-[#073B67] text-white px-6 py-2.5 rounded-full text-sm font-bold hover:shadow-lg hover:bg-slate-800 transition-all active:scale-95">
+          <button onClick={goPartner} className={`px-6 py-2.5 rounded-full text-sm font-bold transition-all active:scale-95 hover:shadow-lg ${scrolled ? 'bg-[#073B67] text-white hover:bg-[#052f52]' : 'bg-white text-[#073B67] hover:bg-slate-100'}`}>
             Seja Parceiro
           </button>
         </div>
 
-        <button className="lg:hidden text-slate-900" onClick={() => setMobileOpen(!mobileOpen)} aria-label="Menu">
+        <button className={`lg:hidden ${mobileOpen || scrolled ? 'text-slate-900' : 'text-white'}`} onClick={() => setMobileOpen(!mobileOpen)} aria-label="Menu">
           {mobileOpen ? <X size={26} /> : <Menu size={26} />}
         </button>
       </div>
