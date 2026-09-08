@@ -7,7 +7,7 @@ const Footer = () => (
     <div className="container mx-auto px-6 grid md:grid-cols-3 gap-12">
       <div>
         <div className="flex items-center space-x-3 mb-6">
-          <Brain className="text-[#2EC4B6]" />
+          <Brain className="text-[#07899A]" />
           <span className="text-xl font-bold">IBDIA</span>
         </div>
         <p className="text-slate-400 text-sm leading-relaxed">
@@ -33,8 +33,8 @@ const Footer = () => (
       <div>
         <h5 className="font-bold text-sm uppercase tracking-widest text-slate-500 mb-6">Newsletter</h5>
         <div className="flex space-x-2">
-          <input type="email" placeholder="Seu e-mail" className="bg-slate-800 border-none rounded-lg px-4 py-2 text-sm w-full outline-none focus:ring-1 focus:ring-[#2EC4B6]" />
-          <button className="bg-[#2EC4B6] px-4 py-2 rounded-lg hover:bg-white hover:text-[#0D3B66] transition-colors"><ChevronRight size={18} /></button>
+          <input type="email" placeholder="Seu e-mail" className="bg-slate-800 border-none rounded-lg px-4 py-2 text-sm w-full outline-none focus:ring-1 focus:ring-[#07899A]" />
+          <button className="bg-[#07899A] px-4 py-2 rounded-lg hover:bg-white hover:text-[#073B67] transition-colors"><ChevronRight size={18} /></button>
         </div>
       </div>
     </div>
@@ -45,4 +45,5 @@ const Footer = () => (
 );
 
 export default Footer;
+
 
