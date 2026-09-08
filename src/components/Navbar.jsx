@@ -26,10 +26,10 @@ const Navbar = () => {
   }, []);
 
   const linkClass = ({ isActive }) =>
-    `text-sm font-bold transition-all hover:text-[#2EC4B6] ${isActive ? 'text-[#2EC4B6]' : 'text-slate-600'}`;
+    `text-sm font-bold transition-all hover:text-[#07899A] ${isActive ? 'text-[#07899A]' : 'text-slate-600'}`;
 
   const mobileLinkClass = ({ isActive }) =>
-    `text-left text-base font-bold transition-all ${isActive ? 'text-[#2EC4B6]' : 'text-slate-700'}`;
+    `text-left text-base font-bold transition-all ${isActive ? 'text-[#07899A]' : 'text-slate-700'}`;
 
   const goPartner = () => {
     navigate('/parceria-institucional');
@@ -44,7 +44,7 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-6 flex justify-between items-center">
         <Link to="/" onClick={() => setMobileOpen(false)} className="flex items-center space-x-3 cursor-pointer">
-          <div className="w-10 h-10 bg-gradient-to-br from-[#0D3B66] to-[#2EC4B6] rounded-xl flex items-center justify-center text-white shadow-lg shadow-blue-200">
+          <div className="w-10 h-10 bg-gradient-to-br from-[#073B67] to-[#07899A] rounded-xl flex items-center justify-center text-white shadow-lg shadow-slate-200">
             <Brain size={22} />
           </div>
           <div>
@@ -58,7 +58,7 @@ const Navbar = () => {
               {link.name}
             </NavLink>
           ))}
-          <button onClick={goPartner} className="bg-[#0D3B66] text-white px-6 py-2.5 rounded-full text-sm font-bold hover:shadow-lg hover:bg-slate-800 transition-all active:scale-95">
+          <button onClick={goPartner} className="bg-[#073B67] text-white px-6 py-2.5 rounded-full text-sm font-bold hover:shadow-lg hover:bg-slate-800 transition-all active:scale-95">
             Seja Parceiro
           </button>
         </div>
@@ -82,4 +82,5 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
 
