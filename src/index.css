@@ -2,14 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Configurações base para o site do IBDIA */
+/* IBDIA — identidade visual unificada */
 :root {
-  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   background-color: #ffffff;
+  color: #0f172a;
+
+  --ibdia-navy: #073B67;
+  --ibdia-teal: #07899A;
+  --ibdia-soft: #EAF4F6;
+  --ibdia-muted: #66727C;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
+  background: #ffffff;
+  color: #0f172a;
+  font-family: inherit;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: -0.02em;
+}
+
+::selection {
+  background: rgba(7, 137, 154, 0.18);
 }
