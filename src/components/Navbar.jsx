@@ -9,6 +9,7 @@ const navLinks = [
   { name: 'Projetos de P&D', to: '/projetos-pd' },
   { name: 'Pesquisa', to: '/pesquisa' },
   { name: 'Institucional', to: '/institucional' },
+  { name: 'Biblioteca', to: '/biblioteca' },
   { name: 'Participe', to: '/participe' },
   { name: 'Contato', to: '/contato' },
 ];
