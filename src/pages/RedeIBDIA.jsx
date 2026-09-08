@@ -1,5 +1,5 @@
 import React from 'react';
-import { SectionHeader, SubHeader, usePageMeta } from '../components/UI.jsx';
+import { PageHero, SubHeader, usePageMeta } from '../components/UI.jsx';
 import SubmissionForm, { Field, CheckGrid, inputClass, textareaClass, selectClass } from '../components/SubmissionForm.jsx';
 
 const categorias = ['Pesquisador Colaborador','Pesquisador Associado','Pesquisador Sênior','Jovem Pesquisador','Especialista Colaborador','Pesquisador Visitante / Visiting Researcher','Líder de Projeto (mediante avaliação)','Outra modalidade'];
@@ -7,9 +7,10 @@ const nucleos = ['IA e Ciência de Dados','Geotecnologias e Inteligência Territ
 
 export default function RedeIBDIA(){
  usePageMeta('Rede IBDIA', 'Candidatura à Rede IBDIA de pesquisadores, profissionais, estudantes e especialistas.');
- return <div className="pt-32 pb-24 container mx-auto px-6 max-w-5xl">
-  <SectionHeader title="Faça parte da Rede IBDIA" subtitle="Manifestação de interesse para pesquisadores, profissionais, docentes, estudantes e especialistas que desejam colaborar com projetos, Núcleos e Programas do Instituto." />
-  <SubmissionForm prefix="REDE" subject="IBDIA — Nova candidatura à Rede IBDIA" submitLabel="Enviar candidatura">
+ return <div>
+  <PageHero eyebrow="Rede Científica" title="Faça parte da Rede IBDIA" subtitle="Manifestação de interesse para pesquisadores, profissionais, docentes, estudantes e especialistas que desejam colaborar com projetos, Núcleos e Programas do Instituto." />
+  <div className="mx-auto max-w-5xl px-6 py-16 lg:px-8">
+<SubmissionForm prefix="REDE" subject="IBDIA — Nova candidatura à Rede IBDIA" submitLabel="Enviar candidatura">
    <section><SubHeader title="1. Dados profissionais" />
     <div className="grid md:grid-cols-2 gap-5">
       <Field label="Nome completo" required><input name="nome" required className={inputClass}/></Field>
@@ -50,5 +51,6 @@ export default function RedeIBDIA(){
     </div>
    </section>
   </SubmissionForm>
+  </div>
  </div>
 }
