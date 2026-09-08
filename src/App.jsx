@@ -14,13 +14,17 @@ import ProponhaProjeto from './pages/ProponhaProjeto.jsx';
 import RedeIBDIA from './pages/RedeIBDIA.jsx';
 import ParceriaInstitucional from './pages/ParceriaInstitucional.jsx';
 import BibliotecaInstitucional from './pages/BibliotecaInstitucional.jsx';
+import Privacidade from './pages/Privacidade.jsx';
+import Etica from './pages/Etica.jsx';
 
 // Rola a página para o topo sempre que a rota muda
 const ScrollToTop = () => {
   const { pathname } = useLocation();
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
+
   return null;
 };
 
@@ -28,8 +32,10 @@ export default function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
+
       <div className="min-h-screen bg-white">
         <Navbar />
+
         <main>
           <Routes>
             <Route path="/" element={<Home />} />
@@ -44,11 +50,15 @@ export default function App() {
             <Route path="/rede-ibdia" element={<RedeIBDIA />} />
             <Route path="/parceria-institucional" element={<ParceriaInstitucional />} />
             <Route path="/biblioteca" element={<BibliotecaInstitucional />} />
+            <Route path="/privacidade" element={<Privacidade />} />
+            <Route path="/etica" element={<Etica />} />
             <Route path="*" element={<Home />} />
           </Routes>
         </main>
+
         <Footer />
       </div>
     </BrowserRouter>
   );
 }
+
