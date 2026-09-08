@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Handshake, TrendingUp, Server, Landmark, BarChart3 } from 'lucide-react';
-import { SectionHeader, SubHeader, InfoCard, CheckList, Tag, usePageMeta } from '../components/UI.jsx';
+import { PageHero, SubHeader, InfoCard, CheckList, Tag, usePageMeta } from '../components/UI.jsx';
 import {
   ECOSSISTEMA, VALOR_PARCEIROS, SUSTENTABILIDADE_FONTES, ESTRUTURA,
   INFRA_ITENS, GOVERNANCA_ITENS, FASES, INDICADORES,
@@ -14,17 +14,18 @@ const Institucional = () => {
   );
 
   return (
-    <div className="pt-32 pb-24 container mx-auto px-6 animate-in slide-in-from-bottom-4 duration-500">
-      <SectionHeader
+    <div className="animate-in slide-in-from-bottom-4 duration-500">
+      <PageHero
+        eyebrow="Governança e Ecossistema"
         title="Institucional"
         subtitle="Parcerias, estrutura, governança e o caminho de implantação do Instituto."
       />
-
-      <div className="mb-20">
+      <div className="mx-auto max-w-7xl px-6 py-16 lg:px-8">
+<div className="mb-20">
         <SubHeader title="Parcerias e Ecossistema" subtitle="O IBDIA opera em rede, conectando-se aos principais grupos do ecossistema de ciência e inovação." />
         <div className="grid lg:grid-cols-2 gap-8">
           <div className="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm">
-            <div className="w-12 h-12 bg-blue-50 text-[#0D3B66] rounded-xl flex items-center justify-center mb-5">
+            <div className="w-12 h-12 bg-[#EAF4F6] text-[#073B67] rounded-xl flex items-center justify-center mb-5">
               <Handshake size={22} />
             </div>
             <h4 className="font-bold text-slate-900 mb-4">Relacionamento institucional</h4>
@@ -33,7 +34,7 @@ const Institucional = () => {
             </div>
           </div>
           <div className="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm">
-            <div className="w-12 h-12 bg-blue-50 text-[#0D3B66] rounded-xl flex items-center justify-center mb-5">
+            <div className="w-12 h-12 bg-[#EAF4F6] text-[#073B67] rounded-xl flex items-center justify-center mb-5">
               <TrendingUp size={22} />
             </div>
             <h4 className="font-bold text-slate-900 mb-4">Valor para empresas parceiras</h4>
@@ -90,7 +91,7 @@ const Institucional = () => {
         <div className="space-y-4">
           {FASES.map((f, i) => (
             <div key={i} className="flex items-start space-x-5 bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
-              <div className="w-10 h-10 flex-shrink-0 rounded-full bg-[#0D3B66] text-white font-bold flex items-center justify-center">
+              <div className="w-10 h-10 flex-shrink-0 rounded-full bg-[#073B67] text-white font-bold flex items-center justify-center">
                 {i + 1}
               </div>
               <div>
@@ -111,28 +112,28 @@ const Institucional = () => {
         </div>
         <Link
           to="/biblioteca"
-          className="inline-flex items-center justify-center px-6 py-3.5 rounded-xl bg-[#0D3B66] text-white font-bold hover:bg-slate-800 transition-colors whitespace-nowrap"
+          className="inline-flex items-center justify-center px-6 py-3.5 rounded-xl bg-[#073B67] text-white font-bold hover:bg-slate-800 transition-colors whitespace-nowrap"
         >
           Acessar Biblioteca
         </Link>
       </div>
 
-      <div className="bg-[#0D3B66] rounded-[2.5rem] p-10 md:p-14 text-white">
+      <div className="bg-[#073B67] rounded-[2.5rem] p-10 md:p-14 text-white">
         <h2 className="text-2xl md:text-3xl font-bold mb-2">Indicadores Estratégicos</h2>
         <p className="text-blue-100/70 mb-8 max-w-2xl">Métricas usadas para acompanhar o crescimento e o impacto do Instituto.</p>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {INDICADORES.map((ind, i) => (
             <div key={i} className="flex items-start space-x-3">
-              <BarChart3 size={18} className="text-[#2EC4B6] flex-shrink-0 mt-0.5" />
+              <BarChart3 size={18} className="text-[#07899A] flex-shrink-0 mt-0.5" />
               <span className="text-sm text-blue-50">{ind}</span>
             </div>
           ))}
         </div>
+      </div>
       </div>
     </div>
   );
 };
 
 export default Institucional;
-
 
