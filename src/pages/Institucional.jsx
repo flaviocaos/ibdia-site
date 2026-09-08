@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Handshake, TrendingUp, Server, Landmark, BarChart3 } from 'lucide-react';
 import { SectionHeader, SubHeader, InfoCard, CheckList, Tag, usePageMeta } from '../components/UI.jsx';
 import {
@@ -101,6 +102,21 @@ const Institucional = () => {
         </div>
       </div>
 
+      <div className="mb-20 bg-slate-50 border border-slate-100 rounded-[2rem] p-8 md:p-10 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+        <div>
+          <h2 className="text-2xl font-bold text-slate-900 mb-2">Biblioteca Institucional</h2>
+          <p className="text-sm text-slate-600 max-w-2xl leading-relaxed">
+            Consulte os documentos públicos do IBDIA sobre estratégia de PD&I, Núcleos, Programas, tecnologias, políticas, governança, ciência aberta e colaboração.
+          </p>
+        </div>
+        <Link
+          to="/biblioteca"
+          className="inline-flex items-center justify-center px-6 py-3.5 rounded-xl bg-[#0D3B66] text-white font-bold hover:bg-slate-800 transition-colors whitespace-nowrap"
+        >
+          Acessar Biblioteca
+        </Link>
+      </div>
+
       <div className="bg-[#0D3B66] rounded-[2.5rem] p-10 md:p-14 text-white">
         <h2 className="text-2xl md:text-3xl font-bold mb-2">Indicadores Estratégicos</h2>
         <p className="text-blue-100/70 mb-8 max-w-2xl">Métricas usadas para acompanhar o crescimento e o impacto do Instituto.</p>
@@ -118,3 +134,4 @@ const Institucional = () => {
 };
 
 export default Institucional;
+
