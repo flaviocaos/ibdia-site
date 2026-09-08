@@ -1,12 +1,13 @@
 import React from 'react';
-import { SectionHeader, SubHeader, usePageMeta } from '../components/UI.jsx';
+import { PageHero, SubHeader, usePageMeta } from '../components/UI.jsx';
 import SubmissionForm, { Field, CheckGrid, inputClass, textareaClass, selectClass } from '../components/SubmissionForm.jsx';
 
 export default function ParceriaInstitucional(){
  usePageMeta('Parceria Institucional', 'Proposta de parceria científica, tecnológica e empresarial com o IBDIA.');
- return <div className="pt-32 pb-24 container mx-auto px-6 max-w-5xl">
-  <SectionHeader title="Seja um Parceiro do IBDIA" subtitle="Empresas, universidades, ICTs, startups, governos e organizações podem propor pesquisa cooperativa, PD&I, pilotos, inovação aberta, capacitação e transferência tecnológica." />
-  <SubmissionForm prefix="PARC" subject="IBDIA — Nova proposta de parceria institucional" submitLabel="Enviar proposta de parceria">
+ return <div>
+  <PageHero eyebrow="Parcerias Institucionais" title="Seja um Parceiro do IBDIA" subtitle="Empresas, universidades, ICTs, startups, governos e organizações podem propor pesquisa cooperativa, PD&I, pilotos, inovação aberta, capacitação e transferência tecnológica." />
+  <div className="mx-auto max-w-5xl px-6 py-16 lg:px-8">
+<SubmissionForm prefix="PARC" subject="IBDIA — Nova proposta de parceria institucional" submitLabel="Enviar proposta de parceria">
    <section><SubHeader title="1. Organização e responsável" />
     <div className="grid md:grid-cols-2 gap-5">
       <Field label="Nome da organização" required><input name="organizacao" required className={inputClass}/></Field>
@@ -41,5 +42,7 @@ export default function ParceriaInstitucional(){
     </div>
    </section>
   </SubmissionForm>
+  </div>
  </div>
 }
+
