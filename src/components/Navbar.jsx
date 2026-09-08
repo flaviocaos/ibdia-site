@@ -6,7 +6,7 @@ const navLinks = [
   { name: 'Home', to: '/' },
   { name: 'Sobre', to: '/sobre' },
   { name: 'Núcleos', to: '/nucleos' },
-  { name: 'Projetos de P&D', to: '/projetos-pd' },
+  { name: 'Programas e Projetos', to: '/projetos-pd' },
   { name: 'Pesquisa', to: '/pesquisa' },
   { name: 'Institucional', to: '/institucional' },
   { name: 'Biblioteca', to: '/biblioteca' },
