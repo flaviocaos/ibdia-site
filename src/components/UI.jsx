@@ -6,6 +6,39 @@ const ICONS = {
   Laptop, Activity, Star, Users, Sprout, Zap, HeartPulse, Factory, Landmark, Lightbulb,
 };
 
+
+export const PageHero = ({ eyebrow = 'IBDIA', title, subtitle, centered = false, stats = [] }) => (
+  <section className="relative overflow-hidden border-b border-white/10 bg-gradient-to-br from-[#073B67] via-[#075A78] to-[#07899A]">
+    <div className="absolute inset-0 pointer-events-none opacity-20">
+      <div className="absolute -right-24 -top-28 h-96 w-96 rounded-full border border-white/30" />
+      <div className="absolute right-36 top-24 h-52 w-52 rounded-full border border-white/20" />
+    </div>
+    <div className={`relative mx-auto max-w-7xl px-6 pb-16 pt-36 lg:px-8 lg:pb-20 lg:pt-40 ${centered ? 'text-center' : ''}`}>
+      <p className="mb-4 text-sm font-semibold uppercase tracking-[0.24em] text-cyan-100">
+        {eyebrow}
+      </p>
+      <h1 className={`text-4xl font-bold tracking-tight text-white md:text-5xl ${centered ? 'mx-auto max-w-5xl' : 'max-w-5xl'}`}>
+        {title}
+      </h1>
+      {subtitle && (
+        <p className={`mt-6 text-lg leading-8 text-slate-100 ${centered ? 'mx-auto max-w-4xl' : 'max-w-4xl'}`}>
+          {subtitle}
+        </p>
+      )}
+      {stats.length > 0 && (
+        <div className={`mt-9 grid grid-cols-2 gap-3 sm:grid-cols-4 ${centered ? 'mx-auto max-w-4xl' : 'max-w-4xl'}`}>
+          {stats.map(([value, label]) => (
+            <div key={`${value}-${label}`} className="rounded-2xl border border-white/15 bg-white/10 p-4 text-left backdrop-blur">
+              <div className="text-2xl font-bold text-white">{value}</div>
+              <div className="mt-1 text-xs leading-5 text-slate-200">{label}</div>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  </section>
+);
+
 export const SectionHeader = ({ title, subtitle, centered = false }) => (
   <div className={`mb-12 ${centered ? 'text-center' : ''}`}>
     <div className={`w-14 h-1 bg-[#07899A] mb-5 rounded-full ${centered ? 'mx-auto' : ''}`}></div>
@@ -166,4 +199,3 @@ export const usePageMeta = (title, description) => {
     }
   }, [title, description]);
 };
-
