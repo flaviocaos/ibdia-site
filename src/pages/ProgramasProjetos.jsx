@@ -170,7 +170,7 @@ export default function ProgramasProjetos() {
   return (
     <main className="bg-white text-slate-900">
       <section className="relative overflow-hidden border-b border-slate-200 bg-gradient-to-br from-[#073B67] via-[#075A78] to-[#07899A]">
-        <div className="mx-auto max-w-7xl px-6 py-20 lg:px-8 lg:py-24">
+        <div className="mx-auto max-w-7xl px-6 pb-16 pt-36 lg:px-8 lg:pb-20 lg:pt-40">
           <p className="mb-4 text-sm font-semibold uppercase tracking-[0.24em] text-cyan-100">Pesquisa, Desenvolvimento e Inovação</p>
           <h1 className="max-w-5xl text-4xl font-bold tracking-tight text-white md:text-5xl">Programas e Projetos de P&D</h1>
           <p className="mt-6 max-w-4xl text-lg leading-8 text-slate-100">O IBDIA organiza sua atuação em Programas Estratégicos de longo prazo, projetos executáveis, plataformas tecnológicas e aplicações. Essa arquitetura conecta os 12 Núcleos de Pesquisa e permite que resultados evoluam da pesquisa à validação e à transferência tecnológica.</p>
