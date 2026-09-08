@@ -3,7 +3,7 @@ import { SectionHeader, SubHeader, usePageMeta } from '../components/UI.jsx';
 import SubmissionForm, { Field, CheckGrid, inputClass, textareaClass, selectClass } from '../components/SubmissionForm.jsx';
 
 const categorias = ['Pesquisador Colaborador','Pesquisador Associado','Pesquisador Sênior','Jovem Pesquisador','Especialista Colaborador','Pesquisador Visitante / Visiting Researcher','Líder de Projeto (mediante avaliação)','Outra modalidade'];
-const nucleos = ['IA e Ciência de Dados','Geotecnologias e Inteligência Territorial','Educação e Capacitação','Inovação, Parcerias e Transferência Tecnológica','Ética, Governança e Regulação de IA','Engenharia, Dados e Infraestrutura Tecnológica','Negócios, Varejo e Indústria 4.0','Meio Ambiente, Mineração e Energia','Defesa, Segurança e Inteligência','Políticas Públicas, Infraestrutura, Saneamento e Cidades Inteligentes','Saúde, Biotecnologia e Ciências da Vida','Ciências Fundamentais, Astronomia, Astrofísica e Cosmologia'];
+const nucleos = ['IA e Ciência de Dados','Geotecnologias e Inteligência Territorial','Educação e Capacitação','Inovação, Parcerias e Transferência Tecnológica','Ética, Governança e Regulação de IA','Engenharia, Dados e Infraestrutura Tecnológica','Negócios, Varejo e Indústria 4.0','Meio Ambiente, Mineração e Energia','Defesa, Segurança e Inteligência','Políticas Públicas, Infraestrutura, Saneamento e Cidades Inteligentes','Agronegócio e Agricultura Digital','Energia e Recursos Naturais'];
 
 export default function RedeIBDIA(){
  usePageMeta('Rede IBDIA', 'Candidatura à Rede IBDIA de pesquisadores, profissionais, estudantes e especialistas.');
