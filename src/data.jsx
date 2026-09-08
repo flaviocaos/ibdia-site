@@ -72,18 +72,18 @@ export const NUCLEOS = [
     entregaveis: ['Painéis municipais', 'Inteligência territorial', 'Priorização de investimentos', 'Analytics de saneamento', 'Modelos de mobilidade'],
   },
   {
-    icon: 'Activity',
-    title: 'Saúde e Ciências da Vida',
-    desc: 'Aplica IA e ciência de dados à pesquisa em saúde, gestão sanitária e desenvolvimento de ferramentas de apoio, respeitando requisitos éticos e regulatórios.',
-    linhas: ['Health Analytics', 'Epidemiologia computacional', 'NLP em saúde', 'Imagens médicas', 'Bioinformática', 'Modelagem preditiva'],
-    entregaveis: ['Dashboards de saúde', 'Previsão epidemiológica', 'Análise documental', 'Apoio à pesquisa clínica', 'Modelos de risco'],
+    icon: 'Sprout',
+    title: 'Agronegócio e Agricultura Digital',
+    desc: 'Aplica IA, dados, sensoriamento e geotecnologias à agricultura de precisão, solos, produção e cadeias agroindustriais.',
+    linhas: ['Agricultura de precisão', 'Sensoriamento remoto aplicado ao agro', 'IA para solos e produtividade', 'Previsão e inteligência agroclimática', 'Monitoramento de culturas', 'Analytics de cadeias agroindustriais'],
+    entregaveis: ['Mapas e modelos agrícolas', 'Monitoramento de culturas', 'Modelos de produtividade', 'Inteligência agroclimática', 'Soluções de agricultura digital'],
   },
   {
-    icon: 'Star',
-    title: 'Astroinformática, Cosmologia Computacional e IA Científica',
-    desc: 'Braço de ciência de fronteira do IBDIA, dedicado à aplicação de IA, ciência de dados e computação avançada a problemas das ciências fundamentais.',
-    linhas: ['Astroinformática', 'Cosmologia computacional', 'Classificação de objetos celestes', 'Buracos negros e fenômenos astrofísicos', 'Ondas gravitacionais', 'Processamento de imagens astronômicas', 'Simulações científicas e detecção de anomalias'],
-    entregaveis: ['Classificação de galáxias', 'Detecção de eventos e anomalias', 'Super-resolução de imagens astronômicas', 'Análise de grandes surveys', 'Modelos científicos reutilizáveis em outras áreas'],
+    icon: 'Zap',
+    title: 'Energia e Recursos Naturais',
+    desc: 'Aplica IA, dados e geotecnologias à exploração responsável, monitoramento, eficiência e gestão de energia e recursos naturais.',
+    linhas: ['Previsão de geração, consumo e demanda', 'Eficiência energética e anomalias', 'Recursos hídricos e reservatórios', 'Mineração e geociências computacionais', 'Petróleo e gás', 'Monitoramento ambiental de ativos'],
+    entregaveis: ['Modelos de previsão energética', 'Analytics de recursos naturais', 'Monitoramento de ativos', 'Detecção de anomalias', 'Soluções para energia, mineração e recursos hídricos'],
   },
 ];
 
