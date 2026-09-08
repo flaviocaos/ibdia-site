@@ -1,6 +1,6 @@
 import React, { useMemo, useState } from 'react';
 import { BookOpen, Download, ExternalLink, FileText, Search, ShieldCheck } from 'lucide-react';
-import { SectionHeader, usePageMeta } from '../components/UI.jsx';
+import { PageHero, usePageMeta } from '../components/UI.jsx';
 
 const documentos = [
   {
@@ -118,7 +118,7 @@ const StatusBadge = ({ status }) => {
     ? 'bg-amber-50 text-amber-700 border-amber-100'
     : isPublica
       ? 'bg-cyan-50 text-cyan-700 border-cyan-100'
-      : 'bg-blue-50 text-[#0D3B66] border-blue-100';
+      : 'bg-[#EAF4F6] text-[#073B67] border-blue-100';
 
   return (
     <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-bold border ${classes}`}>
@@ -149,15 +149,17 @@ const BibliotecaInstitucional = () => {
   }, [busca, categoria]);
 
   return (
-    <div className="pt-32 pb-24 container mx-auto px-6 animate-in slide-in-from-bottom-4 duration-500">
-      <SectionHeader
+    <div className="animate-in slide-in-from-bottom-4 duration-500">
+      <PageHero
+        eyebrow="Acervo Institucional"
         title="Biblioteca Institucional"
         subtitle="Documentos públicos que apresentam a arquitetura científica, tecnológica e institucional do IBDIA."
+        stats={[["13", "Documentos públicos"], ["PD&I", "Estratégia e tecnologia"], ["Governança", "Políticas públicas"], ["Aberta", "Consulta e download"]]}
       />
-
-      <div className="bg-slate-50 border border-slate-100 rounded-3xl p-6 md:p-8 mb-10">
+      <div className="mx-auto max-w-7xl px-6 py-16 lg:px-8">
+<div className="bg-slate-50 border border-slate-100 rounded-3xl p-6 md:p-8 mb-10">
         <div className="flex items-start gap-4">
-          <div className="w-12 h-12 rounded-2xl bg-white text-[#0D3B66] flex items-center justify-center shadow-sm flex-shrink-0">
+          <div className="w-12 h-12 rounded-2xl bg-white text-[#073B67] flex items-center justify-center shadow-sm flex-shrink-0">
             <ShieldCheck size={24} />
           </div>
           <div>
@@ -178,7 +180,7 @@ const BibliotecaInstitucional = () => {
             value={busca}
             onChange={e => setBusca(e.target.value)}
             placeholder="Buscar documento..."
-            className="w-full pl-11 pr-4 py-3.5 bg-white border border-slate-200 rounded-2xl outline-none focus:ring-2 focus:ring-[#2EC4B6]"
+            className="w-full pl-11 pr-4 py-3.5 bg-white border border-slate-200 rounded-2xl outline-none focus:ring-2 focus:ring-[#07899A]"
           />
         </div>
 
@@ -189,7 +191,7 @@ const BibliotecaInstitucional = () => {
               onClick={() => setCategoria(item)}
               className={`px-4 py-2 rounded-full text-sm font-bold transition-colors ${
                 categoria === item
-                  ? 'bg-[#0D3B66] text-white'
+                  ? 'bg-[#073B67] text-white'
                   : 'bg-slate-50 text-slate-600 hover:bg-slate-100'
               }`}
             >
@@ -209,7 +211,7 @@ const BibliotecaInstitucional = () => {
         {filtrados.map(doc => (
           <article key={doc.codigo} className="bg-white border border-slate-100 rounded-3xl p-7 shadow-sm hover:shadow-xl transition-all flex flex-col">
             <div className="flex items-start justify-between gap-4 mb-6">
-              <div className="w-12 h-12 bg-blue-50 text-[#0D3B66] rounded-2xl flex items-center justify-center">
+              <div className="w-12 h-12 bg-[#EAF4F6] text-[#073B67] rounded-2xl flex items-center justify-center">
                 <FileText size={23} />
               </div>
               <span className="text-xs font-black tracking-widest text-slate-300">DOC {doc.codigo}</span>
@@ -219,7 +221,7 @@ const BibliotecaInstitucional = () => {
               <StatusBadge status={doc.status} />
             </div>
 
-            <p className="text-xs uppercase tracking-widest font-bold text-[#2EC4B6] mb-2">{doc.categoria}</p>
+            <p className="text-xs uppercase tracking-widest font-bold text-[#07899A] mb-2">{doc.categoria}</p>
             <h3 className="text-xl font-bold text-slate-900 mb-3 leading-snug">{doc.titulo}</h3>
             <p className="text-sm text-slate-600 leading-relaxed mb-7 flex-grow">{doc.descricao}</p>
 
@@ -228,7 +230,7 @@ const BibliotecaInstitucional = () => {
                 href={doc.arquivo}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-[#0D3B66] text-white text-sm font-bold hover:bg-slate-800 transition-colors"
+                className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-[#073B67] text-white text-sm font-bold hover:bg-slate-800 transition-colors"
               >
                 <ExternalLink size={16} />
                 Visualizar
@@ -253,6 +255,7 @@ const BibliotecaInstitucional = () => {
           <p className="text-sm text-slate-500">Tente outro termo de busca ou selecione uma categoria diferente.</p>
         </div>
       )}
+      </div>
     </div>
   );
 };
