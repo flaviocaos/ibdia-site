@@ -1,5 +1,5 @@
 import React from 'react';
-import { SectionHeader, SubHeader, usePageMeta } from '../components/UI.jsx';
+import { PageHero, SubHeader, usePageMeta } from '../components/UI.jsx';
 import SubmissionForm, { Field, CheckGrid, inputClass, textareaClass, selectClass } from '../components/SubmissionForm.jsx';
 
 const areas = ['IA e Ciência de Dados','Geotecnologias / GeoAI','Saúde e Biomedicina','Indústria e Manufatura','Cidades e Infraestrutura','Meio Ambiente e Clima','Defesa e Segurança','Educação e Capacitação','Políticas Públicas e Sociedade','Inovação Aberta e Startups','Agronegócio e Agricultura Digital','Energia e Recursos Naturais'];
@@ -7,9 +7,10 @@ const programas = ['IBDIA GeoAI','IBDIA Forecast','IBDIA OpenData AI','IBDIA Res
 
 export default function ProponhaProjeto(){
   usePageMeta('Proponha um Projeto', 'Formulário oficial para submissão de projetos, pesquisas, tecnologias e propostas de colaboração ao IBDIA.');
-  return <div className="pt-32 pb-24 container mx-auto px-6 max-w-5xl">
-    <SectionHeader title="Proponha um Projeto ao IBDIA" subtitle="Submeta uma ideia, pesquisa, tecnologia ou proposta de colaboração para triagem e possível enquadramento nos Núcleos, Programas e projetos de PD&I do Instituto." />
-    <SubmissionForm prefix="PROJ" subject="IBDIA — Nova submissão de projeto" submitLabel="Enviar proposta de projeto">
+  return <div>
+  <PageHero eyebrow="Projetos e Colaboração" title="Proponha um Projeto ao IBDIA" subtitle="Submeta uma ideia, pesquisa, tecnologia ou proposta de colaboração para triagem e possível enquadramento nos Núcleos, Programas e projetos de PD&I do Instituto." />
+  <div className="mx-auto max-w-5xl px-6 py-16 lg:px-8">
+<SubmissionForm prefix="PROJ" subject="IBDIA — Nova submissão de projeto" submitLabel="Enviar proposta de projeto">
       <section><SubHeader title="1. Identificação do proponente" />
         <div className="grid md:grid-cols-2 gap-5">
           <Field label="Nome completo" required><input name="nome" required className={inputClass}/></Field>
@@ -60,4 +61,5 @@ export default function ProponhaProjeto(){
       </section>
     </SubmissionForm>
   </div>
+ </div>
 }
