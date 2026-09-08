@@ -5,7 +5,7 @@ import Footer from './components/Footer.jsx';
 import Home from './pages/Home.jsx';
 import Sobre from './pages/Sobre.jsx';
 import Nucleos from './pages/Nucleos.jsx';
-import ProjetosPD from './pages/ProjetosPD.jsx';
+import ProgramasProjetos from './pages/ProgramasProjetos.jsx';
 import Pesquisa from './pages/Pesquisa.jsx';
 import Institucional from './pages/Institucional.jsx';
 import Contato from './pages/Contato.jsx';
@@ -35,7 +35,7 @@ export default function App() {
             <Route path="/" element={<Home />} />
             <Route path="/sobre" element={<Sobre />} />
             <Route path="/nucleos" element={<Nucleos />} />
-            <Route path="/projetos-pd" element={<ProjetosPD />} />
+            <Route path="/projetos-pd" element={<ProgramasProjetos />} />
             <Route path="/pesquisa" element={<Pesquisa />} />
             <Route path="/institucional" element={<Institucional />} />
             <Route path="/contato" element={<Contato />} />
